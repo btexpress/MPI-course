@@ -1,0 +1,134 @@
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'btexpress/centos6'...
+[KProgress: 10%[KProgress: 20%[KProgress: 30%[KProgress: 40%[KProgress: 50%[KProgress: 60%[KProgress: 70%[KProgress: 80%[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
+==> default: Checking if box 'btexpress/centos6' is up to date...
+==> default: Setting the name of the VM: Vagrant_default_1472291618981_71977
+==> default: Fixed port collision for 22 => 2222. Now on port 2201.
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==> default: Forwarding ports...
+    default: 22 (guest) => 2201 (host) (adapter 1)
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2201
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: 
+    default: Vagrant insecure key detected. Vagrant will automatically replace
+    default: this with a newly generated keypair for better security.
+    default: 
+    default: Inserting generated public key within guest...
+    default: Removing insecure key from the guest if it's present...
+    default: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> default: Machine booted and ready!
+[default] GuestAdditions versions on your host (5.0.26) and guest (5.0.20) do not match.
+Loaded plugins: fastestmirror
+Setting up Install Process
+Determining fastest mirrors
+ * base: centos.aol.com
+ * extras: mirrors.advancedhosters.com
+ * updates: centos.aol.com
+Package kernel-devel-2.6.32-642.1.1.el6.x86_64 already installed and latest version
+Package gcc-4.4.7-17.el6.x86_64 already installed and latest version
+Package binutils-2.20.51.0.2-5.44.el6.x86_64 already installed and latest version
+Package 1:make-3.81-23.el6.x86_64 already installed and latest version
+Package 4:perl-5.10.1-141.el6_7.1.x86_64 already installed and latest version
+Package bzip2-1.0.5-7.el6_0.x86_64 already installed and latest version
+Nothing to do
+Copy iso file /usr/share/virtualbox/VBoxGuestAdditions.iso into the box /tmp/VBoxGuestAdditions.iso
+Installing Virtualbox Guest Additions 5.0.26 - guest version is 5.0.20
+Verifying archive integrity... All good.
+Uncompressing VirtualBox 5.0.26 Guest Additions for Linux............
+VirtualBox Guest Additions installer
+Removing installed version 5.0.20 of VirtualBox Guest Additions...
+Stopping VirtualBox Additions [FAILED]
+(Cannot unload module vboxguest)
+Removing existing VirtualBox non-DKMS kernel modules[  OK  ]
+Stopping VirtualBox Guest Addition service [  OK  ][  OK  ]
+Copying additional installer modules ...
+Installing additional modules ...
+Removing existing VirtualBox non-DKMS kernel modules[  OK  ]
+Building the VirtualBox Guest Additions kernel modules
+Building the main Guest Additions module[  OK  ]
+Building the shared folder support module[  OK  ]
+Building the graphics driver module[  OK  ]
+Doing non-kernel setup of the Guest Additions[  OK  ]
+You should restart your guest to make sure the new modules are actually used
+
+==> default: Checking for guest additions in VM...
+==> default: [vagrant-hostsupdater] Checking for host entries
+==> default: Setting hostname...
+==> default: Mounting shared folders...
+    default: /vagrant => /home/wtooles/git-repos/MPI-course/Vagrant
+==> default: Running provisioner: shell...
+    default: Running: inline script
+==> default: warning: 
+==> default: /var/tmp/rpm-tmp.vGRCSC: Header V4 RSA/SHA1 Signature, key ID 4bd6ec30: NOKEY
+==> default: Retrieving https://yum.puppetlabs.com/puppetlabs-release-pc1-el-6.noarch.rpm
+==> default: Preparing...                
+==> default: ##################################################
+==> default: puppetlabs-release-pc1      
+==> default: #########################################
+==> default: #####
+==> default: #
+==> default: ##
+==> default: #
+==> default: Loaded plugins: fastestmirror
+==> default: Setting up Install Process
+==> default: Loading mirror speeds from cached hostfile
+==> default:  * base: centos.aol.com
+==> default:  * extras: mirrors.advancedhosters.com
+==> default:  * updates: centos.aol.com
+==> default: Resolving Dependencies
+==> default: --> Running transaction check
+==> default: ---> Package puppet-agent.x86_64 0:1.6.1-1.el6 will be installed
+==> default: --> Finished Dependency Resolution
+==> default: 
+==> default: Dependencies Resolved
+==> default: 
+==> default: ================================================================================
+==> default:  Package            Arch         Version             Repository            Size
+==> default: ================================================================================
+==> default: Installing:
+==> default:  puppet-agent       x86_64       1.6.1-1.el6         puppetlabs-pc1        27 M
+==> default: 
+==> default: Transaction Summary
+==> default: ================================================================================
+==> default: Install       1 Package(s)
+==> default: Total download size: 27 M
+==> default: Installed size: 27 M
+==> default: Downloading Packages:
+==> default: warning: 
+==> default: rpmts_HdrFromFdno: Header V4 RSA/SHA512 Signature, key ID 4bd6ec30: NOKEY
+==> default: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs-PC1
+==> default: Importing GPG key 0x4BD6EC30:
+==> default:  Userid : Puppet Labs Release Key (Puppet Labs Release Key) <info@puppetlabs.com>
+==> default:  Package: puppetlabs-release-pc1-1.0.0-2.el6.noarch (installed)
+==> default:  From   : /etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs-PC1
+==> default: Running rpm_check_debug
+==> default: Running Transaction Test
+==> default: Transaction Test Succeeded
+==> default: Running Transaction
+==> default: Warning: RPMDB altered outside of yum.
+==> default:   Installing : puppet-agent-1.6.1-1.el6.x86_64                              1/1
+==> default:  
+==> default:   Verifying  : puppet-agent-1.6.1-1.el6.x86_64                              1/1
+==> default:  
+==> default: 
+==> default: Installed:
+==> default:   puppet-agent.x86_64 0:1.6.1-1.el6                                             
+==> default: Complete!
+==> default: cp: 
+==> default: cannot stat `/vagrant/puppet/keys/public_keys/rh6.puppetspecialist.nl.pem'
+==> default: : No such file or directory
+==> default: cp: 
+==> default: cannot stat `/vagrant/puppet/keys/private_keys/rh6.puppetspecialist.nl.pem'
+==> default: : No such file or directory
+==> default: [0;32mInfo: Creating a new SSL key for rh6.puppetspecialist.nl[0m
+==> default: [0;32mInfo: Caching certificate for ca[0m
+==> default: [0;32mInfo: csr_attributes file loading from /etc/puppetlabs/puppet/csr_attributes.yaml[0m
+==> default: [0;32mInfo: Creating a new SSL certificate request for rh6.puppetspecialist.nl[0m
+==> default: [0;32mInfo: Certificate Request fingerprint (SHA256): 3A:A9:C7:1D:90:62:8E:66:9F:AA:CF:E2:22:C4:9A:D9:F9:BD:07:ED:BD:7B:86:F6:E3:DB:6B:E5:A6:6D:96:5E[0m
+==> default: [0;32mInfo: Caching certificate for ca[0m
+==> default: Exiting; no certificate found and waitforcert is disabled
